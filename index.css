@@ -117,6 +117,10 @@ button:hover {
 	display: none;
 }
 
+#ia-buttons{
+	display: none;
+}
+
 #custom-div {
 	vertical-align:middle;
     display: none;

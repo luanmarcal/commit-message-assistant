@@ -1,78 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://kit.fontawesome.com/b3f377d81a.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <script type="module" src="js/index.js"></script>
-    <title>Commit messages assistant</title>
-  </head>
-  <body>
-    <div class="screen">
-      <h1>Commit messages assistant</h1>
-      <div class="card">
-        <div class="card-content">
-          <div id="custom-input">
-            <label id="custom-text" for="custom-commit">
-              <b>
-                Commit message:
-              </b>
-            </label>
-            <div id="custom-div">
-              <select id="custom-prefix" name="custom-prefix" required="required">
-                <option value="emoji">Emoji</option>
-                <option value="fix">Fix</option>
-                <option value="feat">Feat</option>
-                <option value="docs">Docs</option>
-                <option value="breaking">Breaking change</option>
-              </select>
-              <textarea id="custom-commit" name="custom-commit"></textarea>
-            </div>
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <title>Commit messages assistant</title>
+</head>
+<body>
+  <div class="screen">
+    <h1>Commit messages assistant</h1>
+    <div class="card">
+      <div class="card-content">
+        <div id="custom-input">
+          <label id="custom-text" for="custom-commit">
+            <b>
+              Commit message:
+            </b>
+          </label>
+          <div id="custom-div">
+            <select id="custom-prefix" name="custom-prefix" required="required">
+              <option value="emoji">Emoji</option>
+              <option value="fix">Fix</option>
+              <option value="feat">Feat</option>
+              <option value="docs">Docs</option>
+              <option value="breaking">Breaking change</option>
+            </select>
+            <textarea id="custom-commit" name="custom-commit" maxlength="500"></textarea>
           </div>
-          <div class="card-text">
-            <p>
-              <b id="text">
-                Clique nos botões abaixo para gerar uma mensagem de commit aleatória
-              </b>
-            </p>
+        </div>
+        <div class="card-text">
+          <p>
+            <b id="text">
+              Clique nos botões abaixo para gerar uma mensagem de commit aleatória
+            </b>
+          </p>
+        </div>
+
+        <div class="button-container">
+          <div id="random-buttons">
+            <button id="btn-funny">Frase engraçada</button>
+            <button id="btn-random">Frase aleatória</button>
+            <button id="btn-emoji">Emoji aleatório</button>
           </div>
-
-          <div class="button-container">
-            <div id="random-buttons">
-              <button id="btn-funny">Frase engraçada</button>
-              <button id="btn-random">Frase aleatória</button>
-              <button id="btn-emoji">Emoji aleatório</button>
-            </div>
-            <div id="custom-buttons">
-              <button id="btn-custom">Gerar commit com frase personalizada</button>
-            </div>
-
-            <div class="dropdown">
-              <button id="btn-config" class="dropbtn">
-                <i class="fas fa-cog fa-2x"></i>
-              </button>
-              <div id="settingsMenu" class="dropdown-content">
-                <div class="checkbox-container">
-                  <div class="settings">
-                    <input type="checkbox" name="checkbox-text" id="checkbox-text">
-                    <label for="checkbox-text">Texto personalizado</label>
-                  </div>
-                  <div class="settings">
-                    <input type="checkbox" name="checkbox-am" id="checkbox-am">
-                    <label for="checkbox-am">Usar "-am" em vez de "-m"</label>
-                  </div>
-                  <div class="settings">
-                    <input type="checkbox" name="checkbox-quote" id="checkbox-quote">
-                    <label for="checkbox-quote">Aspas simples</label>
-                  </div>
+          <div id="custom-buttons">
+            <button id="btn-custom">Gerar commit com frase personalizada</button>
+          </div>
+          <div id="ia-buttons">
+            <button id="btn-ia-custom">Gerar commit por IA</button>
+          </div>
+          <div class="dropdown">
+            <button id="btn-config" class="dropbtn">
+              <i class="fas fa-cog fa-2x"></i>
+            </button>
+            <div id="settingsMenu" class="dropdown-content">
+              <div class="checkbox-container">
+                <div class="settings">
+                  <input type="checkbox" name="checkbox-ia" id="checkbox-ia">
+                  <label for="checkbox-ia">Gerar por IA</label>
+                </div>
+                <div class="settings">
+                  <input type="checkbox" name="checkbox-text" id="checkbox-text">
+                  <label for="checkbox-text">Texto personalizado</label>
+                </div>
+                <div class="settings">
+                  <input type="checkbox" name="checkbox-am" id="checkbox-am">
+                  <label for="checkbox-am">Usar "-am" em vez de "-m"</label>
+                </div>
+                <div class="settings">
+                  <input type="checkbox" name="checkbox-quote" id="checkbox-quote">
+                  <label for="checkbox-quote">Aspas simples</label>
                 </div>
               </div>
             </div>
-            
           </div>
-		      <div id="copy-phrase"></div>
+
         </div>
+        <div id="copy-phrase"></div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+<script src="https://kit.fontawesome.com/b3f377d81a.js" crossorigin="anonymous"></script>
+<script type="module" src="js/index.js"></script>
 </html>
